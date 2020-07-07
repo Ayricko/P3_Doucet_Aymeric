@@ -1,0 +1,213 @@
+
+/* Gestion des fonts du site */
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Courgette&family=Croissant+One&family=Dancing+Script&family=Devonshire&family=Kalam&family=Kaushan+Script&family=Montserrat&family=Poppins:wght@600&display=swap');
+
+/* Aucune marge sur le site */
+* {
+    margin:0;
+    padding:0;
+}
+
+/* Gestion de l'entête du site */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #579C87;
+    width: 100%;
+    height: 120px;
+    color: #FACB47;
+    font-family: 'Poppins', sans-serif, arial;
+    font-size: 1.5em;
+}
+
+/* Gestion du pied de page */
+footer{
+    display: flex;
+    background-color: #579C87;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    font-family: 'Montserrat', sans-serif, arial;
+}
+
+footer a{ 
+    color: #FACB47;
+    font-size: 1.2em;
+    padding: 30px;
+}
+
+/* Gestion des liens */
+a {
+    text-decoration: none;
+}
+
+a:visited{
+    color: unset;
+}
+
+
+/* Gestion des menus et sous menus page principale */
+
+.etage1, .etage2{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.la_note, .french, .delice, .palette {
+    width: 30%;
+    min-width: 350px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    text-align: center;
+}
+
+.la_note{
+    background-color: #FADFDB;
+}
+
+.la_note h2{
+    font-family: 'devonshire', sans-serif, arial;
+    font-size: 1.7em;
+}
+
+.la_note h3{
+    font-family: 'kalam', sans-serif, arial;
+    font-size: 1.7em; 
+}
+
+.french{
+    background-color: #FDF5FE;
+}
+
+.french h2 {
+    font-family: 'Croissant One', sans-serif, arial;
+    font-size: 1.5em; 
+}
+
+.french h3{
+    font-family: 'Cantata One', sans-serif, arial;
+    font-size: 1.5em;  
+}
+
+.delice {
+    background-color: #F9F9F9;
+}
+
+.delice h2{
+    font-family: 'Dancing Script', sans-serif, arial;
+    font-size: 1.7em; 
+}
+
+.delice h3{
+    font-family: 'kalam', sans-serif, arial;
+    font-size: 1.7em; 
+}
+
+.palette{
+    background-color: #FDFFFD;
+}
+
+.palette h2{
+    font-family: 'Kaushan Script', sans-serif, arial;
+    font-size: 1.7em; 
+}
+
+.palette h3{
+    font-family: 'kalam', sans-serif, arial;
+    font-size: 1.7em; 
+}
+
+/* Gestion du prochainement */
+
+.soon{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.soon-title{
+    width: 300px;
+    height: 50px;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif, arial;
+    font-size: 1.5em;
+    background-color: #579C87;
+    color: #FACB47;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* gesttion de toutes les pages menu */
+
+.page{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Gestion du menu de chaque page */
+
+.menu{
+    width: 60%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    min-width: 500px;
+    height: 1000px;
+}
+
+.items-menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px 10px 40px;
+    font-family: 'Courgette', sans-serif, arial;
+}
+
+.titre, .titre-intermediaire{
+    text-align: center;
+}
+
+.titre, .titre-final{
+    padding: 30px;
+    font-family: 'kalam', sans-serif, arial;
+}
+
+.titre-intermediaire{
+    padding: 30px;
+    font-family: 'Courgette', sans-serif, arial;
+    font-size: 1.4em;
+}
+
+.titre-final{
+    display: flex;
+    justify-content: center;
+}
+
+.titre p {
+    font-size: 2.7em;
+    padding-top: 10px;
+}
+
+.titre-final p {
+    font-size: 1.6em;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+/* Gestion du menu de la note enchantée */
+
+.menu-la_note{
+    width: 100%;
+    height: 100%;
+    background-color: #FADFDB;
+}
+
