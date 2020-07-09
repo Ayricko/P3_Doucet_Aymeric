@@ -19,6 +19,7 @@ header {
     color: #FACB47;
     font-family: 'Poppins', sans-serif, arial;
     font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
 /* Gestion du pied de page */
@@ -39,12 +40,16 @@ footer a{
 }
 
 /* Gestion des liens */
-a {
+a{
     text-decoration: none;
 }
 
 a:visited{
     color: unset;
+}
+
+footer a:visited{
+    color: #FACB47;
 }
 
 
@@ -64,17 +69,25 @@ a:visited{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 30px;
+    margin: 20px;
     text-align: center;
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.23);
 }
 
 .la_note{
     background-color: #FADFDB;
 }
 
+.la_note i{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, #E24D55, #EB934D)
+}
+
 .la_note h2{
     font-family: 'devonshire', sans-serif, arial;
     font-size: 1.7em;
+    color: #FACB47;
 }
 
 .la_note h3{
@@ -88,12 +101,16 @@ a:visited{
 
 .french h2 {
     font-family: 'Croissant One', sans-serif, arial;
-    font-size: 1.5em; 
+    font-size: 1.5em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, #CC652F, #9E5BF0)
 }
 
 .french h3{
     font-family: 'Cantata One', sans-serif, arial;
     font-size: 1.5em;  
+    color:  #CC652F;
 }
 
 .delice {
@@ -102,12 +119,16 @@ a:visited{
 
 .delice h2{
     font-family: 'Dancing Script', sans-serif, arial;
-    font-size: 1.7em; 
+    font-size: 1.8em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, #414CC7, #1daafc) 
 }
 
 .delice h3{
     font-family: 'kalam', sans-serif, arial;
     font-size: 1.7em; 
+    color: #4477CF;
 }
 
 .palette{
@@ -116,12 +137,16 @@ a:visited{
 
 .palette h2{
     font-family: 'Kaushan Script', sans-serif, arial;
-    font-size: 1.7em; 
+    font-size: 1.8em; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, #71BF55, #9DE36C) 
 }
 
 .palette h3{
     font-family: 'kalam', sans-serif, arial;
     font-size: 1.7em; 
+    color: #5ECA33;
 }
 
 /* Gestion du prochainement */
@@ -158,56 +183,197 @@ a:visited{
 /* Gestion du menu de chaque page */
 
 .menu{
-    width: 60%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    width: 65%;
+    height: auto;
+    margin: 50px 0px 50px 0px;
     min-width: 500px;
-    height: 1000px;
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.23);
 }
 
-.items-menu{
+.menu-la_note, .menu-french {
+    width: 100%;
+    height: 100%;
+}
+
+.items-menu, .items-menu-final{
     display: flex;
     justify-content: space-between;
     padding: 10px 40px 10px 40px;
     font-family: 'Courgette', sans-serif, arial;
 }
 
+.items-menu-final{
+    padding-bottom: 80px;
+}
+
 .titre, .titre-intermediaire{
     text-align: center;
 }
 
-.titre, .titre-final{
-    padding: 30px;
-    font-family: 'kalam', sans-serif, arial;
+.titre {
+    padding: 50px 0px 20px 0px;
 }
 
-.titre-intermediaire{
+.titre-intermediaire {
     padding: 30px;
     font-family: 'Courgette', sans-serif, arial;
+}
+
+.titre-intermediaire:hover{
+    background-size: 100% 100%;
+}
+
+/* Gestion du menu la note enchantée */
+
+.menu-la_note{
+    background-color: #FADFDB;
+}
+
+.menu i{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, #E24D55, #EB934D);
+}
+
+.menu .titre i{
+    font-size: 7em;
+}
+
+.menu-la_note .titre-intermediaire {
     font-size: 1.4em;
+}
+
+.titre--la_note, .titre-final--la_note {
+    font-family: 'Devonshire', sans-serif, arial;
+}
+
+.titre--la_note{
+    padding-top: 15px;
+    font-size: 3em;
 }
 
 .titre-final{
     display: flex;
     justify-content: center;
+    padding: 35px 0px 40px 0px;
 }
 
-.titre p {
-    font-size: 2.7em;
-    padding-top: 10px;
+.titre-final--la_note{
+    padding: 10px 0px 0px 20px;
+    font-size: 3em;
 }
 
-.titre-final p {
+/* Gestion du menu le chic à la française */
+
+.menu-french{
+    background-color: #fff5fe;
+}
+
+.titre--french{
+    font-family: 'Croissant One', sans-serif, arial;
+    font-size: 3em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, #CC652F, #9E5BF0)
+}
+
+.menu-french .titre-intermediaire {
+    font-size: 1.1em;
+}
+
+.menu-french .part1{
+    color: #C67412;
+}
+
+.menu-french .part2{
+    color: #A56799;
+}
+
+.menu-french .part3{
+    color: #6E4CCC;
+}
+
+/* Gestion du menu le chic délices des papilles */
+
+.menu-delice{
+    background-color: #edefef;
+}
+
+.titre--delice{
+    font-family: 'Dancing Script', sans-serif, arial;
+    font-size: 5em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, #414CC7, #1daafc) 
+}
+
+.menu-delice .titre-intermediaire{
+    font-size: 1.25em;
+}
+
+/* Gestion du menu la pallettes des saveurs */
+
+.titre--palette{
+    font-family: 'Kaushan Script', sans-serif, arial;
+    font-size: 5em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, #71BF55, #9DE36C) 
+}
+
+.menu-palette .titre-intermediaire{
+    font-size: 1.25em;
+}
+
+/* Gestion de la page mention légales */
+
+.mentions {
+    width: 70%;
+    margin: 0px auto 70px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+h5{
     font-size: 1.6em;
-    padding-left: 15px;
-    padding-top: 20px;
+    padding: 20px;
+    color:#7E57C2;
+    margin: auto;
 }
 
-/* Gestion du menu de la note enchantée */
+.mentions .justifié{
+    text-align: justify;
+    padding-bottom: 25px;
+}
 
-.menu-la_note{
-    width: 100%;
-    height: 100%;
-    background-color: #FADFDB;
+.mentions ul{
+    padding: 0 30px 0 30px;
+    text-align: justify;
+}
+
+.mentions li {
+    padding: 2px;
+}
+
+.mentions .centré{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.mentions .centré ul{
+    padding: 10px 65px 10px 65px;
+}
+
+.mentions .centré div{
+    text-align: center;
+    padding: 5px;
+}
+
+.mentions .centré div:nth-child(3){
+    font-size: 1.3em;
+    padding-top: 30px;
 }
 
