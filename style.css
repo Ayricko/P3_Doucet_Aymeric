@@ -576,12 +576,25 @@ h5{
         width: 95%;
     }
 
+    .menu .titre i, .menu .titre-final i {
+        font-size: 3em;
+    }
+
+    .titre--french{
+        font-size: 1.8em; 
+    }
+
+    .titre--la_note, .titre--delice, .titre--palette{
+        font-size: 2em;
+    }
+
     .titre-final--la_note {
         padding: 10px 0px 0px 20px;
-        font-size: 1.5em;}
+        font-size: 1.5em;
+    }
 
      .mentions {
         width: 90%;
+    }
 
 }
-
