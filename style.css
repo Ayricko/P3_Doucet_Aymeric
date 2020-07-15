@@ -107,7 +107,7 @@ footer a:visited{
 }
 
 
-/*///////////////////////////////// Gestion des menus et sous menus page principale /////////////////////////////////*/
+/*///////////////////////////////// affichage des menus sur la page principale /////////////////////////////////*/
 
 .etage1, .etage2{
     display: flex;
@@ -133,7 +133,6 @@ footer a:visited{
 }
 
 .la_note i{
-    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     background-image: linear-gradient(to left, #E24D55, #EB934D)
@@ -158,7 +157,6 @@ footer a:visited{
 .french h2 {
     font-family: 'Croissant One', sans-serif, arial;
     font-size: 1.5em;
-    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     background-image: linear-gradient(to left, #CC652F, #9E5BF0)
@@ -177,7 +175,6 @@ footer a:visited{
 .delice h2{
     font-family: 'Dancing Script', sans-serif, arial;
     font-size: 1.8em;
-    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     background-image: linear-gradient(to left, #414CC7, #1daafc) 
@@ -196,7 +193,6 @@ footer a:visited{
 .palette h2{
     font-family: 'Kaushan Script', sans-serif, arial;
     font-size: 1.8em; 
-    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     background-image: linear-gradient(to left, #71BF55, #9DE36C) 
@@ -270,7 +266,7 @@ footer a:visited{
     margin: auto;
 }
 
-/*///////////////////////////////// Gestion du menu de chaque page /////////////////////////////////*/
+/*///////////////////////////////// Gestion de chaque page menu /////////////////////////////////*/
 
 .menu{
     width: 65%;
@@ -333,7 +329,6 @@ footer a:visited{
 }
 
 .menu i{
-    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     background-image: linear-gradient(to left, #E24D55, #EB934D);
@@ -388,7 +383,6 @@ footer a:visited{
 .titre--french{
     font-family: 'Croissant One', sans-serif, arial;
     font-size: 3em;
-    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     background-image: linear-gradient(to left, #CC652F, #9E5BF0)
@@ -447,7 +441,6 @@ footer a:visited{
 .titre--delice{
     font-family: 'Dancing Script', sans-serif, arial;
     font-size: 5em;
-    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     background-image: linear-gradient(to left, #414CC7, #1daafc) 
@@ -490,7 +483,6 @@ footer a:visited{
 .titre--palette{
     font-family: 'Kaushan Script', sans-serif, arial;
     font-size: 5em;
-    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     background-image: linear-gradient(to left, #71BF55, #9DE36C) 
@@ -563,5 +555,33 @@ h5{
 .mentions .centré div:nth-child(3){
     font-size: 1.3em;
     padding-top: 30px;
+}
+
+/*///////////////////////////////// Gestion des medias Queries /////////////////////////////////*/
+
+@media all and (max-width: 767px){
+
+    .la_note, .french, .delice, .palette {
+        height: 88vw;
+        width: 100%;
+        min-width: unset;
+    }
+
+    footer a{
+        font-size: 3.8vw;
+    }
+
+    .menu{
+        min-width: unset;
+        width: 95%;
+    }
+
+    .titre-final--la_note {
+        padding: 10px 0px 0px 20px;
+        font-size: 1.5em;}
+
+     .mentions {
+        width: 90%;
+
 }
 
