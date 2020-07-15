@@ -1,14 +1,14 @@
 
-/* Gestion des fonts du site */
+/*///////////////////////////////// Gestion des fonts du site /////////////////////////////////*/
 @import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Courgette&family=Croissant+One&family=Dancing+Script&family=Devonshire&family=Kalam&family=Kaushan+Script&family=Montserrat&family=Poppins:wght@600&display=swap');
 
-/* Aucune marge sur le site */
+/*///////////////////////////////// Aucune marge sur le site /////////////////////////////////*/
 * {
     margin:0;
     padding:0;
 }
 
-/* Gestion de l'entête du site */
+/*///////////////////////////////// Gestion de l'entête du site /////////////////////////////////*/
 header {
     display: flex;
     align-items: center;
@@ -19,10 +19,17 @@ header {
     color: #FACB47;
     font-family: 'Poppins', sans-serif, arial;
     font-size: 1.5em;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
-/* Gestion du pied de page */
+h1{
+    transition: all .5s;
+}
+h1:hover{
+    transform: scale(1.2);
+}
+
+/*///////////////////////////////// Gestion du pied de page /////////////////////////////////*/
 footer{
     display: flex;
     background-color: #579C87;
@@ -31,15 +38,15 @@ footer{
     width: 100%;
     height: 80px;
     font-family: 'Montserrat', sans-serif, arial;
+    position: sticky;
+    bottom: 0;
 }
 
-footer a{ 
-    color: #FACB47;
-    font-size: 1.2em;
-    padding: 30px;
+.footer-mentions:hover, .footer-contact:hover{
+    animation: shake 0.8s infinite;
 }
 
-/* Gestion des liens */
+/*///////////////////////////////// Gestion des liens /////////////////////////////////*/
 a{
     text-decoration: none;
 }
@@ -48,12 +55,59 @@ a:visited{
     color: unset;
 }
 
+footer a{ 
+    color: #FACB47;
+    font-size: 1.2em;
+    padding: 30px;
+}
+
 footer a:visited{
     color: #FACB47;
 }
 
+.etage1 a:hover, .etage2 a:hover{
+    transform: scale(1.2);
+    opacity: .5; 
+}
 
-/* Gestion des menus et sous menus page principale */
+.etage2 a, .etage1 a{
+    transition: all .5s;
+}
+
+/*///////////////////////////////// Gestion des animations /////////////////////////////////*/
+
+@keyframes shake{
+    10%, 90% {
+        transform: translateX(-1px);
+    }
+    20%, 80% {
+        transform: translateX(2px);
+    }
+    30%, 50%, 70%{
+        transform: translateX(-4px);
+    }
+    40%, 60%{
+        transform: translateX(4px);
+    }
+}
+
+@keyframes point{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(-4px);
+        opacity: .2;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/*///////////////////////////////// Gestion des menus et sous menus page principale /////////////////////////////////*/
 
 .etage1, .etage2{
     display: flex;
@@ -79,9 +133,10 @@ footer a:visited{
 }
 
 .la_note i{
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: -webkit-linear-gradient(left, #E24D55, #EB934D)
+    color: transparent;
+    background-image: linear-gradient(to left, #E24D55, #EB934D)
 }
 
 .la_note h2{
@@ -102,9 +157,10 @@ footer a:visited{
 .french h2 {
     font-family: 'Croissant One', sans-serif, arial;
     font-size: 1.5em;
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: -webkit-linear-gradient(left, #CC652F, #9E5BF0)
+    color: transparent;
+    background-image: linear-gradient(to left, #CC652F, #9E5BF0)
 }
 
 .french h3{
@@ -120,9 +176,10 @@ footer a:visited{
 .delice h2{
     font-family: 'Dancing Script', sans-serif, arial;
     font-size: 1.8em;
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: -webkit-linear-gradient(left, #414CC7, #1daafc) 
+    color: transparent;
+    background-image: linear-gradient(to left, #414CC7, #1daafc) 
 }
 
 .delice h3{
@@ -138,9 +195,10 @@ footer a:visited{
 .palette h2{
     font-family: 'Kaushan Script', sans-serif, arial;
     font-size: 1.8em; 
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: -webkit-linear-gradient(left, #71BF55, #9DE36C) 
+    color: transparent;
+    background-image: linear-gradient(to left, #71BF55, #9DE36C) 
 }
 
 .palette h3{
@@ -149,7 +207,7 @@ footer a:visited{
     color: #5ECA33;
 }
 
-/* Gestion du prochainement */
+/*///////////////////////////////// Gestion du prochainement /////////////////////////////////*/
 
 .soon{
     width: 100%;
@@ -157,10 +215,11 @@ footer a:visited{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 20px;
 }
 
-.soon-title{
-    width: 300px;
+.soon .soon-box{
+    width: 270px;
     height: 50px;
     border-radius: 15px;
     font-family: 'Montserrat', sans-serif, arial;
@@ -169,23 +228,53 @@ footer a:visited{
     color: #FACB47;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+.points{
+    display: flex;
+    padding-top: 12px;
 }
 
-/* gesttion de toutes les pages menu */
+.soon .soon-box .points p{
+    background-color: #FACB47;
+    margin: 0 3px 0 3px;
+    width: 7px;
+    height: 7px;
+    border-radius: 7px;
+}
+
+.point1 {
+    animation: point 1.5s infinite;
+}
+
+.point2 {
+    animation: point 1.5s 0.2s infinite;
+}
+
+.point3 {
+    animation: point 1.5s 0.4s infinite;
+}
+
+/*///////////////////////////////// gestion de toutes les pages menu /////////////////////////////////*/
 
 .page{
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    padding-bottom: 40px;
 }
 
-/* Gestion du menu de chaque page */
+.page .menu{
+    margin: auto;
+}
+
+/*///////////////////////////////// Gestion du menu de chaque page /////////////////////////////////*/
 
 .menu{
     width: 65%;
     height: auto;
-    margin: 50px 0px 50px 0px;
+    max-width: 760px;
     min-width: 500px;
     box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.23);
 }
@@ -217,22 +306,36 @@ footer a:visited{
 .titre-intermediaire {
     padding: 30px;
     font-family: 'Courgette', sans-serif, arial;
+    display: flex;
+    justify-content: center;
+
 }
 
-.titre-intermediaire:hover{
-    background-size: 100% 100%;
+.titre-intermediaire p{
+    padding: 0 10px 0 10px;
+    min-width: 190px;
+    background: linear-gradient(to top, black 0%, black 1px, transparent 1.01px) no-repeat;
+    background-size: 0 100%;
+    transition: all .5s;
 }
 
-/* Gestion du menu la note enchantée */
+.titre-intermediaire img{
+    height: 8px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/*///////////////////////////////// Gestion du menu la note enchantée /////////////////////////////////*/
 
 .menu-la_note{
     background-color: #FADFDB;
 }
 
 .menu i{
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: -webkit-linear-gradient(left, #E24D55, #EB934D);
+    color: transparent;
+    background-image: linear-gradient(to left, #E24D55, #EB934D);
 }
 
 .menu .titre i{
@@ -241,6 +344,18 @@ footer a:visited{
 
 .menu-la_note .titre-intermediaire {
     font-size: 1.4em;
+}
+
+.menu-la_note .titre-intermediaire p{
+    padding: 0 10px 0 10px;
+    min-width: 190px;
+    background: linear-gradient(to top, black 0%, black 1.5px, transparent 1.51px) no-repeat;
+    background-size: 0 100%;
+    transition: all .5s;
+}
+
+.menu-la_note .titre-intermediaire p:hover {
+    background-size: 100% 100%;
 }
 
 .titre--la_note, .titre-final--la_note {
@@ -263,7 +378,7 @@ footer a:visited{
     font-size: 3em;
 }
 
-/* Gestion du menu le chic à la française */
+/*///////////////////////////////// Gestion du menu le chic à la française /////////////////////////////////*/
 
 .menu-french{
     background-color: #fff5fe;
@@ -272,13 +387,42 @@ footer a:visited{
 .titre--french{
     font-family: 'Croissant One', sans-serif, arial;
     font-size: 3em;
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: -webkit-linear-gradient(left, #CC652F, #9E5BF0)
+    color: transparent;
+    background-image: linear-gradient(to left, #CC652F, #9E5BF0)
 }
 
 .menu-french .titre-intermediaire {
     font-size: 1.1em;
+}
+
+.menu-french .part1 .titre-intermediaire p{
+    padding: 0 10px 0 10px;
+    min-width: 190px;
+    background: linear-gradient(to top, #C67412 0%, #C67412 1.5px, transparent 1.51px) no-repeat;
+    background-size: 0 100%;
+    transition: all .5s;
+}
+
+.menu-french .part2 .titre-intermediaire p{
+    padding: 0 10px 0 10px;
+    min-width: 190px;
+    background: linear-gradient(to top, #A56799 0%, #A56799 1.5px, transparent 1.51px) no-repeat;
+    background-size: 0 100%;
+    transition: all .5s;
+}
+
+.menu-french .part3 .titre-intermediaire p{
+    padding: 0 10px 0 10px;
+    min-width: 190px;
+    background: linear-gradient(to top, #6E4CCC 0%, #6E4CCC 1.5px, transparent 1.51px) no-repeat;
+    background-size: 0 100%;
+    transition: all .5s;
+}
+
+.menu-french .titre-intermediaire p:hover {
+    background-size: 100% 100%;
 }
 
 .menu-french .part1{
@@ -293,7 +437,7 @@ footer a:visited{
     color: #6E4CCC;
 }
 
-/* Gestion du menu le chic délices des papilles */
+/*///////////////////////////////// Gestion du menu le chic délices des papilles /////////////////////////////////*/
 
 .menu-delice{
     background-color: #edefef;
@@ -302,36 +446,79 @@ footer a:visited{
 .titre--delice{
     font-family: 'Dancing Script', sans-serif, arial;
     font-size: 5em;
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: -webkit-linear-gradient(left, #414CC7, #1daafc) 
+    color: transparent;
+    background-image: linear-gradient(to left, #414CC7, #1daafc) 
+}
+
+.menu-delice .part1 .titre-intermediaire p{
+    padding: 0 10px 0 10px;
+    min-width: 190px;
+    background: linear-gradient(to top, #103EDD 0%, #103EDD 1.5px, transparent 1.51px) no-repeat;
+    background-size: 0 100%;
+    transition: all .5s;
+}
+
+.menu-delice .part2 .titre-intermediaire p{
+    padding: 0 10px 0 10px;
+    min-width: 190px;
+    background: linear-gradient(to top, #2D70EB 0%, #2D70EB 1.5px, transparent 1.51px) no-repeat;
+    background-size: 0 100%;
+    transition: all .5s;
+}
+
+.menu-delice .part3 .titre-intermediaire p{
+    padding: 0 10px 0 10px;
+    min-width: 190px;
+    background: linear-gradient(to top, #4A9CF2 0%, #4A9CF2 1.5px, transparent 1.51px) no-repeat;
+    background-size: 0 100%;
+    transition: all .5s;
+}
+
+.menu-delice .titre-intermediaire p:hover {
+    background-size: 100% 100%;
 }
 
 .menu-delice .titre-intermediaire{
     font-size: 1.25em;
 }
 
-/* Gestion du menu la pallettes des saveurs */
+/*///////////////////////////////// Gestion du menu la pallettes des saveurs /////////////////////////////////*/
 
 .titre--palette{
     font-family: 'Kaushan Script', sans-serif, arial;
     font-size: 5em;
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: -webkit-linear-gradient(left, #71BF55, #9DE36C) 
+    color: transparent;
+    background-image: linear-gradient(to left, #71BF55, #9DE36C) 
 }
 
 .menu-palette .titre-intermediaire{
     font-size: 1.25em;
 }
 
-/* Gestion de la page mention légales */
+.menu-palette .titre-intermediaire p{
+    padding: 0 10px 0 10px;
+    min-width: 190px;
+    background: linear-gradient(to top, #9DE36C 0%, #9DE36C 1.5px, transparent 1.51px) no-repeat;
+    background-size: 0 100%;
+    transition: all .5s;
+}
+
+.menu-palette .titre-intermediaire p:hover {
+    background-size: 100% 100%;
+}
+
+/*///////////////////////////////// Gestion de la page mention légales /////////////////////////////////*/
 
 .mentions {
     width: 70%;
     margin: 0px auto 70px auto;
     display: flex;
     flex-direction: column;
+    padding-bottom: 50px;
 }
 
 h5{
