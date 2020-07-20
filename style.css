@@ -133,6 +133,7 @@ footer a:visited{
 }
 
 .la_note i{
+    background-clip: content-box;
     -webkit-background-clip: text;
     color: transparent;
     background-image: linear-gradient(to left, #E24D55, #EB934D)
@@ -157,9 +158,10 @@ footer a:visited{
 .french h2 {
     font-family: 'Croissant One', sans-serif, arial;
     font-size: 1.5em;
+    background-clip: content-box;
     -webkit-background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to left, #CC652F, #9E5BF0)
+    background-image: linear-gradient(to left, #CC652F, #9E5BF0);
 }
 
 .french h3{
@@ -175,6 +177,7 @@ footer a:visited{
 .delice h2{
     font-family: 'Dancing Script', sans-serif, arial;
     font-size: 1.8em;
+    background-clip: content-box;
     -webkit-background-clip: text;
     color: transparent;
     background-image: linear-gradient(to left, #414CC7, #1daafc) 
@@ -192,7 +195,8 @@ footer a:visited{
 
 .palette h2{
     font-family: 'Kaushan Script', sans-serif, arial;
-    font-size: 1.8em; 
+    font-size: 1.8em;
+    background-clip: content-box;
     -webkit-background-clip: text;
     color: transparent;
     background-image: linear-gradient(to left, #71BF55, #9DE36C) 
@@ -241,15 +245,15 @@ footer a:visited{
 }
 
 .point1 {
-    animation: point 1.5s infinite;
+    animation: point 1.5s ease-in-out infinite;
 }
 
 .point2 {
-    animation: point 1.5s 0.2s infinite;
+    animation: point 1.5s ease-in-out 0.1s infinite;
 }
 
 .point3 {
-    animation: point 1.5s 0.4s infinite;
+    animation: point 1.5s ease-in-out 0.2s infinite;
 }
 
 /*///////////////////////////////// gestion de toutes les pages menu /////////////////////////////////*/
@@ -260,10 +264,18 @@ footer a:visited{
     flex-direction: column;
     justify-content: center;
     padding-bottom: 40px;
+    align-items: center;
+}
+
+.titre_page{
+    margin-bottom: 40px;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-size: 1.6em;
 }
 
 .page .menu{
     margin: auto;
+
 }
 
 /*///////////////////////////////// Gestion de chaque page menu /////////////////////////////////*/
@@ -310,7 +322,6 @@ footer a:visited{
 
 .titre-intermediaire p{
     padding: 0 10px 0 10px;
-    min-width: 190px;
     background: linear-gradient(to top, black 0%, black 1px, transparent 1.01px) no-repeat;
     background-size: 0 100%;
     transition: all .5s;
@@ -329,6 +340,7 @@ footer a:visited{
 }
 
 .menu i{
+    background-clip: content-box;
     -webkit-background-clip: text;
     color: transparent;
     background-image: linear-gradient(to left, #E24D55, #EB934D);
@@ -343,14 +355,27 @@ footer a:visited{
 }
 
 .menu-la_note .titre-intermediaire p{
-    padding: 0 10px 0 10px;
-    min-width: 190px;
     background: linear-gradient(to top, black 0%, black 1.5px, transparent 1.51px) no-repeat;
     background-size: 0 100%;
     transition: all .5s;
 }
 
-.menu-la_note .titre-intermediaire p:hover {
+.la_note1{
+    padding: 0 40px 0 40px;
+    min-width: 90px; 
+}
+
+.la_note2{
+    padding: 0 10px 0 10px;
+    min-width: 151px; 
+}
+
+.la_note3{
+    padding: 0 10px 0 10px;
+    min-width: 190px;
+}
+
+.menu-la_note .titre-intermediaire p:hover{
     background-size: 100% 100%;
 }
 
@@ -383,6 +408,7 @@ footer a:visited{
 .titre--french{
     font-family: 'Croissant One', sans-serif, arial;
     font-size: 3em;
+    background-clip: content-box;
     -webkit-background-clip: text;
     color: transparent;
     background-image: linear-gradient(to left, #CC652F, #9E5BF0)
@@ -393,27 +419,36 @@ footer a:visited{
 }
 
 .menu-french .part1 .titre-intermediaire p{
-    padding: 0 10px 0 10px;
-    min-width: 190px;
     background: linear-gradient(to top, #C67412 0%, #C67412 1.5px, transparent 1.51px) no-repeat;
     background-size: 0 100%;
     transition: all .5s;
 }
 
 .menu-french .part2 .titre-intermediaire p{
-    padding: 0 10px 0 10px;
-    min-width: 190px;
     background: linear-gradient(to top, #A56799 0%, #A56799 1.5px, transparent 1.51px) no-repeat;
     background-size: 0 100%;
     transition: all .5s;
 }
 
 .menu-french .part3 .titre-intermediaire p{
-    padding: 0 10px 0 10px;
-    min-width: 190px;
     background: linear-gradient(to top, #6E4CCC 0%, #6E4CCC 1.5px, transparent 1.51px) no-repeat;
     background-size: 0 100%;
     transition: all .5s;
+}
+
+.french1{
+    padding: 0 10px 0 10px;
+    min-width: 217px;
+}
+
+.french2{
+    padding: 0 10px 0 10px;
+    min-width: 165px;
+}
+
+.french3{
+    padding: 0 10px 0 10px;
+    min-width: 191px;
 }
 
 .menu-french .titre-intermediaire p:hover {
@@ -441,33 +476,43 @@ footer a:visited{
 .titre--delice{
     font-family: 'Dancing Script', sans-serif, arial;
     font-size: 5em;
+    background-clip: content-box;
     -webkit-background-clip: text;
     color: transparent;
     background-image: linear-gradient(to left, #414CC7, #1daafc) 
 }
 
 .menu-delice .part1 .titre-intermediaire p{
-    padding: 0 10px 0 10px;
-    min-width: 190px;
     background: linear-gradient(to top, #103EDD 0%, #103EDD 1.5px, transparent 1.51px) no-repeat;
     background-size: 0 100%;
     transition: all .5s;
 }
 
 .menu-delice .part2 .titre-intermediaire p{
-    padding: 0 10px 0 10px;
-    min-width: 190px;
     background: linear-gradient(to top, #2D70EB 0%, #2D70EB 1.5px, transparent 1.51px) no-repeat;
     background-size: 0 100%;
     transition: all .5s;
 }
 
 .menu-delice .part3 .titre-intermediaire p{
-    padding: 0 10px 0 10px;
-    min-width: 190px;
     background: linear-gradient(to top, #4A9CF2 0%, #4A9CF2 1.5px, transparent 1.51px) no-repeat;
     background-size: 0 100%;
     transition: all .5s;
+}
+
+.delice1{
+    padding: 0 10px 0 10px;
+    min-width: 210px;
+}
+
+.delice2{
+    padding: 0 10px 0 10px;
+    min-width: 194px;
+}
+
+.delice3{
+    padding: 0 10px 0 10px;
+    min-width: 186px;
 }
 
 .menu-delice .titre-intermediaire p:hover {
@@ -482,7 +527,8 @@ footer a:visited{
 
 .titre--palette{
     font-family: 'Kaushan Script', sans-serif, arial;
-    font-size: 5em;
+    font-size: 4em;
+    background-clip: content-box;
     -webkit-background-clip: text;
     color: transparent;
     background-image: linear-gradient(to left, #71BF55, #9DE36C) 
@@ -492,15 +538,32 @@ footer a:visited{
     font-size: 1.25em;
 }
 
-.menu-palette .titre-intermediaire p{
+.palette1{
+    padding: 0 40px 0 40px;
+    min-width: 90px;
+}
+
+.palette2{
     padding: 0 10px 0 10px;
-    min-width: 190px;
-    background: linear-gradient(to top, #9DE36C 0%, #9DE36C 1.5px, transparent 1.51px) no-repeat;
+    min-width: 172px;
+}
+
+.palette3{
+    padding: 0 10px 0 10px;
+    min-width: 187px;
+}
+
+.menu-palette .titre-intermediaire p{
+    background: linear-gradient(to top, #9DE36C 0, #9DE36C 1.5px, transparent 1.51px) no-repeat;
     background-size: 0 100%;
     transition: all .5s;
 }
 
 .menu-palette .titre-intermediaire p:hover {
+    background-size: 100% 100%;
+}
+
+.menu-palette .titre-intermediaire p:hover:after {
     background-size: 100% 100%;
 }
 
