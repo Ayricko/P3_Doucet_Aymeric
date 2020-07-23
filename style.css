@@ -43,7 +43,7 @@ footer{
 }
 
 .footer-mentions:hover, .footer-contact:hover{
-    animation: shake 0.8s infinite;
+    animation: shake .9s infinite;
 }
 
 /*///////////////////////////////// Gestion des liens /////////////////////////////////*/
@@ -219,7 +219,7 @@ footer a:visited{
     padding-top: 20px;
 }
 
-.soon .soon-box{
+.soon-box{
     width: 270px;
     height: 50px;
     border-radius: 15px;
@@ -236,7 +236,7 @@ footer a:visited{
     padding-top: 12px;
 }
 
-.soon .soon-box .points p{
+.points p{
     background-color: #FACB47;
     margin: 0 3px 0 3px;
     width: 7px;
@@ -560,10 +560,6 @@ footer a:visited{
 }
 
 .menu-palette .titre-intermediaire p:hover {
-    background-size: 100% 100%;
-}
-
-.menu-palette .titre-intermediaire p:hover:after {
     background-size: 100% 100%;
 }
 
