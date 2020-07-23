@@ -97,7 +97,7 @@ footer a:visited{
         opacity: 1;
     }
     50%{
-        transform: translateY(-4px);
+        transform: translateY(-8px);
         opacity: .2;
     }
     100%{
@@ -249,11 +249,11 @@ footer a:visited{
 }
 
 .point2 {
-    animation: point 1.5s ease-in-out 0.1s infinite;
+    animation: point 1.5s ease-in-out 0.25s infinite;
 }
 
 .point3 {
-    animation: point 1.5s ease-in-out 0.2s infinite;
+    animation: point 1.5s ease-in-out 0.5s infinite;
 }
 
 /*///////////////////////////////// gestion de toutes les pages menu /////////////////////////////////*/
