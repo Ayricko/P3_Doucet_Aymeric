@@ -1,3 +1,7 @@
+nav{
+    width: 100%;
+}
+
 .la_note, .french, .delice, .palette {
     height: 88vw;
     width: 100%;
@@ -5,7 +9,7 @@
 }
 
 footer a{
-    font-size: 3.8vw;
+    font-size: 3vw;
 }
 
 .menu{
@@ -32,4 +36,8 @@ footer a{
 
  .mentions {
     width: 90%;
+}
+
+.footer-mentions:hover, .footer-contact:hover{
+    animation: shake 0s infinite;
 }
